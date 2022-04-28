@@ -2,7 +2,7 @@ import { Nav, Navbar, Button, Container, Modal, Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useState } from "react"
+import { useState } from "react";
 
 const Styles = styled.div`
     a, .navbar-brand, .navbar-nav .nav-link {
@@ -15,14 +15,10 @@ const Styles = styled.div`
 `
 
 const NaviBar = () => {
-
-
     const [show, setShow] = useState(false);
-
     const handleClose = () => {
         setShow(false);
     }
-
     const handleShow = () => {
         setShow(true);
     }
@@ -33,7 +29,7 @@ const NaviBar = () => {
             <Styles>
                 <Navbar collapseOnSelect expand='lg' bg="dark" variant="dark">
                     <Container>
-                        <Navbar.Brand>Logo</Navbar.Brand>
+                        <Navbar.Brand style={{ cursor: "default" }}><Link to="/home">Logo</Link></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav" >
                             <Nav className="me-auto" >

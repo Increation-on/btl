@@ -5,6 +5,7 @@ import NaviBar from "./UI/NaviBar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Users from './Pages/Users';
+import Footer from "./UI/Footer";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/users" element={<Users />} />
         </Routes>
+        <Footer/>
       </Router>
+      
     </>
   );
 }
